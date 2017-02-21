@@ -102,11 +102,6 @@ if [ $ansB == "y" ]; then
   printf "${GREEN_TXT}Done.\n\n${WHITE_TXT}"
 fi
 
-#Add catkin_make from any repository
-printf "${GREEN_TXT}Adding catkin_make from any repository...\n${WHITE_TXT}"
-echo "alias catkin_make=\"ORIGIN=\$(pwd) && roscd && echo 'Navigating to catkin directory...' && cd .. && echo 'running catking_make command...' && catkin_make && echo 'going back to origin' && cd \$ORIGIN\"" >> ~/.bashrc
-printf "${GREEN_TXT}Done.\n\n${WHITE_TXT}"
-
 #Fix crawling issue
 printf "${GREEN_TXT}Fixing crawling issue...\n${WHITE_TXT}"
 sudo umount /home/$(whoami)/.gvfs
