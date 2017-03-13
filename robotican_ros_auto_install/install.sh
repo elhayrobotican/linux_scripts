@@ -30,6 +30,8 @@ sudo apt-get purge -y openssh-server
 sudo apt-get install -y openssh-server
 printf "${GREEN_TXT}Done.\n\n${WHITE_TXT}"
 
+
+
 #installing terminator
 printf "${GREEN_TXT}Installing terminator...\n${WHITE_TXT}"
 sudo add-apt-repository -y ppa:gnome-terminator
@@ -140,6 +142,16 @@ if [ $ansD == "y" ]; then
   printf "${GREEN_TXT}Done.\n\n${WHITE_TXT}"
 fi
 
+#installing silentcast gif recording
+printf "${GREEN_TXT}Installing silentcast...\n${WHITE_TXT}"
+sudo add-apt-repository ppa:sethj/silentcast  
+sudo add-apt-repository ppa:mc3man/trusty-media -y
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install ffmpeg
+sudo apt-get install silentcast
+printf "${GREEN_TXT}Done.\n\n${WHITE_TXT}"
+
 printf "${GREEN_TXT}***Installtion Completed***\n\n${WHITE_TXT}"
 echo "Reboot is needed to apply installation changes. Reboot now? [y/n]: "
 read ansE
@@ -148,6 +160,8 @@ if [ $ansE == "y" ]; then
   sleep 3
   sudo reboot
 fi
+
+
 
 
 
