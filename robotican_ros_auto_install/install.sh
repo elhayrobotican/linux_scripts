@@ -49,6 +49,12 @@ sudo apt-get install geany
 xdg-mime default geany.desktop $(grep MimeType /usr/share/applications/geany.desktop | sed 's/MimeType=//' | sed 's/;/ /g')
 printf "${GREEN_TXT}Done.\n\n${WHITE_TXT}"
 
+#installing git
+printf "${GREEN_TXT}Installing git...\n${WHITE_TXT}"
+sudo apt-get install git
+printf "${GREEN_TXT}Done.\n\n${WHITE_TXT}"
+
+
 #installing ros indigo
 printf "${GREEN_TXT}Installing ros indigo...\n${WHITE_TXT}"
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
